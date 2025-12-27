@@ -13,22 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fayis K | Full Stack Developer in Kozhikode",
+  title: "Fayis K (bcziamfayiz) | Full Stack Developer in Kozhikode",
   description:
-    "Fayis K is a Full Stack Developer from Kozhikode, India. Specialized in MERN stack, modern web applications, and scalable backend systems.",
+    "Fayis K, also known as bcziamfayiz, is a Full Stack Developer from Kozhikode, India. Specialized in MERN stack, scalable backend systems, and modern web applications.",
   keywords: [
     "Fayis K",
+    "bcziamfayiz",
     "Fayis K Developer",
-    "Fayis K Full Stack Developer",
     "Full Stack Developer Kozhikode",
     "MERN Developer Kozhikode",
     "Web Developer Kozhikode",
+    "Fayis K Full Stack Developer",
   ],
   authors: [{ name: "Fayis K" }],
   openGraph: {
     title: "Fayis K | Full Stack Developer",
     description:
-      "Official personal website of Fayis K – Full Stack Developer from Kozhikode, India.",
+      "Official personal website of Fayis K (bcziamfayiz), Full Stack Developer from Kozhikode, India.",
     url: "https://your-domain.vercel.app",
     siteName: "Fayis K",
     type: "website",
@@ -48,7 +49,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* JSON-LD Schema for Google */}
+        {/* JSON-LD Schema (CRITICAL for Google) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -56,6 +57,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Fayis K",
+              alternateName: "bcziamfayiz",
               url: "https://your-domain.vercel.app",
               jobTitle: "Full Stack Developer",
               address: {
