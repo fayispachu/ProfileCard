@@ -13,26 +13,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fayis K | Full Stack Developer",
+  title: "Fayis K | Full Stack Developer in Kozhikode",
   description:
-    "Fayis K – Full Stack Developer, Crypto Trader, and Content Creator from Kozhikode, India.",
+    "Fayis K is a Full Stack Developer from Kozhikode, India. Specialized in MERN stack, modern web applications, and scalable backend systems.",
   keywords: [
     "Fayis K",
-    "Full Stack Developer",
-    "Web Developer",
-    "Crypto Trader",
-    "MERN Developer",
+    "Fayis K Developer",
+    "Fayis K Full Stack Developer",
+    "Full Stack Developer Kozhikode",
+    "MERN Developer Kozhikode",
+    "Web Developer Kozhikode",
   ],
   authors: [{ name: "Fayis K" }],
   openGraph: {
     title: "Fayis K | Full Stack Developer",
     description:
-      "Personal profile of Fayis K – Full Stack Developer & Crypto Trader.",
-    type: "website",
+      "Official personal website of Fayis K – Full Stack Developer from Kozhikode, India.",
     url: "https://your-domain.vercel.app",
+    siteName: "Fayis K",
+    type: "website",
   },
-
-  // ✅ GOOGLE VERIFICATION (THIS IS THE RIGHT PLACE)
   verification: {
     google: "-ZKbB1cwla0jQAlFgqBc3otb4pWn09XViLJppCKtj9U",
   },
@@ -40,15 +40,39 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* JSON-LD Schema for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Fayis K",
+              url: "https://your-domain.vercel.app",
+              jobTitle: "Full Stack Developer",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Kozhikode",
+                addressCountry: "India",
+              },
+              sameAs: [
+                "https://github.com/fayispachu",
+                "https://fayis-k-developer.onrender.com",
+              ],
+            }),
+          }}
+        />
+
         {children}
       </body>
     </html>
   );
 }
-// a
