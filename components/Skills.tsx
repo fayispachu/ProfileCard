@@ -71,7 +71,7 @@ export default function Skills() {
           className="mt-10 max-w-2xl text-center px-6"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent mb-3">
-            {activeSkill} ⚙️
+            {activeSkill} 
           </h2>
           <p className="text-gray-400 text-sm md:text-base leading-relaxed">
             {skillDescriptions[activeSkill]}
