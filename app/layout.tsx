@@ -1,7 +1,9 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,6 +20,8 @@ export const metadata: Metadata = {
     "Fayis K, also known as bcziamfayiz, is a Full Stack Developer from Kozhikode, India. Specialized in MERN stack, scalable backend systems, and modern web applications.",
   keywords: [
     "Fayis K",
+    "fayis k developer",
+    "fayis k",
     "bcziamfayiz",
     "Full Stack Developer Kozhikode",
     "MERN Developer Kozhikode",
@@ -26,14 +30,40 @@ export const metadata: Metadata = {
   authors: [{ name: "Fayis K" }],
   openGraph: {
     title: "Fayis K | Full Stack Developer",
-    description:
-      "Official personal website of Fayis K (bcziamfayiz), Full Stack Developer from Kozhikode, India.",
-    url: "https://your-domain.vercel.app",
+    description: "Official personal website of Fayis K (bcziamfayiz), Full Stack Developer from Kozhikode, India.",
+    url: "https://bcziamfayiz.vercel.app",
     siteName: "Fayis K",
     type: "website",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dtcjm5qss/image/upload/v1767123632/fayis_wrm6r5.png",
+        width: 400,
+        height: 400,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fayis K | Full Stack Developer",
+    description: "Official personal website of Fayis K (bcziamfayiz)",
+    images: ["https://res.cloudinary.com/dtcjm5qss/image/upload/v1767123632/fayis_wrm6r5.png"], 
   },
   verification: {
     google: "-ZKbB1cwla0jQAlFgqBc3otb4pWn09XViLJppCKtj9U",
+  },
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/fayis.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/images/fayis.png",
+      },
+    ],
+    shortcut: "/images/fayis.png",
+    apple: "/images/fayis.png",
   },
 };
 
@@ -51,6 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               alternateName: "bcziamfayiz",
               url: "https://bcziamfayiz.vercel.app/",
               jobTitle: "Full Stack Developer",
+              image: "https://res.cloudinary.com/dtcjm5qss/image/upload/v1767123632/fayis_wrm6r5.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Kozhikode",
@@ -64,8 +95,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         {children}
-           <Analytics />
+        <Analytics />
       </body>
     </html>
   );
 }
+      
