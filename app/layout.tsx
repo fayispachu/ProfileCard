@@ -13,17 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fayis K (bcziamfayiz) | Full Stack Developer in Kozhikode",
+  title: "Fayis K | Full Stack Developer",
   description:
     "Fayis K, also known as bcziamfayiz, is a Full Stack Developer from Kozhikode, India. Specialized in MERN stack, scalable backend systems, and modern web applications.",
   keywords: [
     "Fayis K",
     "bcziamfayiz",
-    "Fayis K Developer",
     "Full Stack Developer Kozhikode",
     "MERN Developer Kozhikode",
     "Web Developer Kozhikode",
-    "Fayis K Full Stack Developer",
   ],
   authors: [{ name: "Fayis K" }],
   openGraph: {
@@ -39,17 +37,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {/* JSON-LD Schema (CRITICAL for Google) */}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -72,7 +63,6 @@ export default function RootLayout({
             }),
           }}
         />
-
         {children}
       </body>
     </html>

@@ -1,0 +1,100 @@
+"use client";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+export default function Contact() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    alert("This is a temporary form. Submission is disabled.");
+  };
+
+  return (
+    <section
+      id="contact"
+      className="bg-black transition-all flex items-center justify-center text-white"
+    >
+      <div
+        data-aos="fade-up"
+        className="bg-black p-6 sm:p-8 md:p-12  shadow-lg w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
+      >
+        {/* Left Side */}
+        <div className="flex flex-col justify-center">
+          <h2 className="text-3xl sm:text-4xl font-bold font-serif mb-4">
+            Let’s Connect
+          </h2>
+          <p className="text-neutral-400 mb-6 text-sm sm:text-base leading-relaxed">
+            Have a project in mind or just want to say hello? I’m always open to
+            discussing new ideas or opportunities to be part of your vision.
+          </p>
+
+          <div className="space-y-3 text-sm sm:text-base">
+            <p>
+              <span className="font-semibold">Location:</span> Kozhikode, India
+            </p>
+            <p>
+              <span className="font-semibold">Email:</span>{" "}
+              fayizpachu217@gmail.com
+            </p>
+            <p>
+              <span className="font-semibold">Phone:</span> +91 9744850680
+            </p>
+          </div>
+        </div>
+
+        {/* Right Side - Form */}
+        <div className="flex flex-col justify-center">
+          <h1 className="text-xl sm:text-2xl font-bold text-center mb-6 font-serif">
+            Contact Me
+          </h1>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block mb-1 font-semibold text-sm sm:text-base">
+                Name
+              </label>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full p-2.5 sm:p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 font-semibold text-sm sm:text-base">
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full p-2.5 sm:p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 font-semibold text-sm sm:text-base">
+                Message
+              </label>
+              <textarea
+                rows={4}
+                placeholder="Your Message"
+                className="w-full p-2.5 sm:p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-white hover:bg-black text-neutral-800 hover:text-white transition p-2.5 sm:p-3 rounded-lg font-semibold text-sm sm:text-base"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}
