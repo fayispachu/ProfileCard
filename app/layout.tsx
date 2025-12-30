@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "Person",
               name: "Fayis K",
               alternateName: "bcziamfayiz",
-              url: "https://your-domain.vercel.app",
+              url: "https://bcziamfayiz.vercel.app/",
               jobTitle: "Full Stack Developer",
               address: {
                 "@type": "PostalAddress",
