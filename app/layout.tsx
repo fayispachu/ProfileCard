@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "fayis k developer",
     "fayis k",
     "bcziamfayiz",
-     "Best mernstack developer in kozhikode",
+    "Best mernstack developer in kozhikode",
     "The best mernstack developer in calicut",
     "Full Stack Developer Kozhikode",
     "MERN Developer Kozhikode",
