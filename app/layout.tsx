@@ -24,11 +24,9 @@ export const metadata: Metadata = {
     "developer fayis",
     "bcziamfayiz",
     "Next.js Developer",
-    "Next.js Full Stack Developer",
     "MERN Stack Developer",
-    "React Developer",
-    "Node.js Backend Developer",
     "Full Stack Web Developer",
+    "Best mernstack developer in kozhikode",
   ],
   authors: [{ name: "Fayis K" }],
 
