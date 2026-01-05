@@ -15,59 +15,66 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fayis K | Full Stack Developer",
+  title: "Fayis K | Next.js & MERN Full Stack Developer",
   description:
-    "Fayis K, also known as bcziamfayiz, is a Full Stack Developer from Kozhikode, India. Specialized in MERN stack, scalable backend systems, and modern web applications.",
+    "Official website of Fayis K (bcziamfayiz). Full Stack Developer specializing in Next.js, MERN stack, scalable backend systems, real-time applications, and performance-focused web development.",
   keywords: [
     "Fayis K",
-    "fayis k developer",
     "fayis k",
+    "developer fayis",
     "bcziamfayiz",
-    "Full Stack Developer Kozhikode",
-    "MERN Developer Kozhikode",
-    "Web Developer Kozhikode",
+    "Next.js Developer",
+    "Next.js Full Stack Developer",
+    "MERN Stack Developer",
+    "React Developer",
+    "Node.js Backend Developer",
+    "Full Stack Web Developer",
   ],
   authors: [{ name: "Fayis K" }],
+
   openGraph: {
-    title: "Fayis K | Full Stack Developer",
-    description: "Official personal website of Fayis K (bcziamfayiz), Full Stack Developer from Kozhikode, India.",
+    title: "Fayis K | Next.js & MERN Full Stack Developer",
+    description:
+      "Official personal website of Fayis K (bcziamfayiz), Full Stack Developer focused on Next.js and MERN stack.",
     url: "https://bcziamfayiz.vercel.app",
     siteName: "Fayis K",
     type: "website",
     images: [
       {
-        url: "https://res.cloudinary.com/dtcjm5qss/image/upload/v1767123632/fayis_wrm6r5.png",
-        width: 400,
-        height: 400,
+        url: "https://bcziamfayiz.vercel.app/images/profile.png",
+        width: 1200,
+        height: 1200,
+        alt: "Fayis K Full Stack Developer",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Fayis K | Full Stack Developer",
-    description: "Official personal website of Fayis K (bcziamfayiz)",
-    images: ["https://res.cloudinary.com/dtcjm5qss/image/upload/v1767123632/fayis_wrm6r5.png"], 
+    title: "Fayis K | Next.js & MERN Full Stack Developer",
+    description:
+      "Official website of Fayis K (bcziamfayiz) — Full Stack Developer specialized in Next.js & MERN.",
+    images: [
+      "https://bcziamfayiz.vercel.app/images/profile.png",
+    ],
   },
+
   verification: {
     google: "-ZKbB1cwla0jQAlFgqBc3otb4pWn09XViLJppCKtj9U",
   },
+
   icons: {
-    icon: [
-      {
-        media: "(prefers-color-scheme: light)",
-        url: "/images/fayis.png",
-      },
-      {
-        media: "(prefers-color-scheme: dark)",
-        url: "/images/fayis.png",
-      },
-    ],
-    shortcut: "/images/fayis.png",
-    apple: "/images/fayis.png",
+    icon: "/images/profile.png",
+    shortcut: "/images/profile.png",
+    apple: "/images/profile.png",
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
@@ -80,8 +87,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: "Fayis K",
               alternateName: "bcziamfayiz",
               url: "https://bcziamfayiz.vercel.app/",
-              jobTitle: "Full Stack Developer",
-              image: "https://res.cloudinary.com/dtcjm5qss/image/upload/v1767123632/fayis_wrm6r5.png",
+              jobTitle: "Next.js Full Stack Engineer",
+              image: "https://bcziamfayiz.vercel.app/images/profile.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Kozhikode",
@@ -100,4 +107,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-      
