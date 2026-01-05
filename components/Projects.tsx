@@ -36,8 +36,8 @@ const projects = [
     demo: "https://fayis-portfolio-1.onrender.com",
   },
   {
-    title: "E-Commerce Store",
-    description: "Full-stack e-commerce platform (Not created yet).",
+    title: "Private Chat app",
+    description: "A private chat app built with MERN and socket.io",
     image: "https://via.placeholder.com/400x250",
     github: "#",
     demo: "#",
