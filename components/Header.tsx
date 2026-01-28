@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import me from "@/public/Me.png";
+import me from "@/public/images/profile.png";
 // ok
 export default function Header() {
   const [show, setShow] = useState(true);

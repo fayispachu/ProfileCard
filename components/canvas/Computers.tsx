@@ -10,8 +10,8 @@ const Computers = () => {
     <primitive
       object={scene}
       scale={0.8}
-      position={[0, -0.5, 0]}
-      rotation={[0, Math.PI / 4, 0]} // FIXED: radians, not degrees
+      position={[0, -0.9, 0]}
+      rotation={[0, -Math.PI / 4, 0]} 
     />
   );
 };

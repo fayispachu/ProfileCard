@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import me from "@/public/Me.png";
+import me from "@/public/images/profile.png";
 import Header from "./Header";
 import About from "./About";
 import Projects from "./Projects";

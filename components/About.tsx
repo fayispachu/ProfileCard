@@ -56,18 +56,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* Link to Projects */}
-      <div data-aos="fade-up" className="mt-10 flex justify-center">
-        <Link
-          to="projects"
-          smooth
-          duration={500}
-          offset={-80}
-          className="inline-block px-6 py-3 font-bold bg-white text-black rounded-full cursor-pointer hover:bg-black hover:text-white transition"
-        >
-          Projects
-        </Link>
-      </div>
+      
     </section>
   );
 }

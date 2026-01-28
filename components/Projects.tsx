@@ -36,8 +36,8 @@ const projects = [
     demo: "https://fayis-portfolio-1.onrender.com",
   },
   {
-    title: "Private Chat app",
-    description: "A private chat app built with MERN and socket.io",
+    title: "Private Chat App",
+    description: "A private chat app built with MERN and Socket.IO.",
     image: "https://via.placeholder.com/400x250",
     github: "#",
     demo: "#",
@@ -61,8 +61,11 @@ export default function Projects() {
       id="projects"
       className="bg-black text-white py-16 px-6 md:px-20 lg:px-32 min-h-screen"
     >
+      {/* Heading */}
       <div data-aos="fade-up" className="text-center mb-12">
-        <h2 className="font-bold text-4xl md:text-5xl font-serif">Projects</h2>
+        <h2 className="font-bold text-4xl md:text-5xl font-serif">
+          Projects
+        </h2>
         <p className="mt-4 text-lg text-gray-400">
           A showcase of my work — blending clean code with creative design.
         </p>
@@ -75,28 +78,26 @@ export default function Projects() {
             key={index}
             data-aos="fade-up"
             data-aos-delay={index * 150}
-            className="relative group bg-neutral-950 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+            className="relative bg-neutral-950 rounded-xl overflow-hidden shadow-lg"
           >
-            {/* Mobile top-right button */}
-            <div className="absolute top-3 right-3 z-20">
-              <button className="bg-cyan-500 text-white px-3 py-1 rounded-full text-xs sm:hidden">
-                Info
-              </button>
-            </div>
-
             {/* Image */}
             <Image
               src={project.image}
               alt={project.title}
               width={400}
               height={250}
-              className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-56 object-cover"
             />
 
-            {/* Hover overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 group-hover:bg-black/90 transition duration-300 p-4">
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-sm text-gray-300 mb-4">{project.description}</p>
+            {/* Always-visible overlay */}
+            <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center text-center p-4">
+              <h3 className="text-xl font-bold mb-2">
+                {project.title}
+              </h3>
+              <p className="text-sm text-gray-300 mb-4">
+                {project.description}
+              </p>
+
               <div className="flex gap-4">
                 <a
                   href={project.github}
@@ -130,7 +131,7 @@ export default function Projects() {
             data-aos-delay={index * 100}
             className={`px-4 py-2 rounded-md text-sm font-medium border ${
               currentPage === index + 1
-                ? "bg-white text-black border-neutral-500 hover:bg-gray-200"
+                ? "bg-white text-black border-neutral-500"
                 : "bg-black text-white border-gray-300 hover:bg-neutral-900"
             }`}
           >

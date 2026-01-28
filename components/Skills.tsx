@@ -9,14 +9,16 @@ import Image from "next/image";
 const skills = [
   { id: 1, name: "HTML", icon: "/assets/html.png" },
   { id: 2, name: "CSS", icon: "/assets/css.png" },
-  { id: 3, name: "React", icon: "/assets/react.png" },
-  { id: 4, name: "Node.js", icon: "/assets/nodejs.png" },
-  { id: 5, name: "Express.js", icon: "/assets/express.png" },
-  { id: 6, name: "MongoDB", icon: "/assets/mongodb.png" },
-  { id: 7, name: "MySQL", icon: "/assets/mysql.png" },
-  { id: 8, name: "GitHub", icon: "/assets/github.png" },
-  { id: 9, name: "Figma", icon: "/assets/figma.png" },
-  { id: 10, name: "Tailwind CSS", icon: "/assets/tailwind.png" },
+  { id: 3, name: "JavaScript", icon: "/assets/js.png" },
+  { id: 4, name: "React", icon: "/assets/react.png" },
+  { id: 5, name: "Next js", icon: "/assets/nextjs.png", bgClass: "bg-white" },
+  { id: 6, name: "Node.js", icon: "/assets/nodejs.png" },
+  { id: 7, name: "Express.js", icon: "/assets/express.png" },
+  { id: 8, name: "MongoDB", icon: "/assets/mongodb.png" },
+  { id: 9, name: "MySQL", icon: "/assets/mysql.png" },
+  { id: 10, name: "GitHub", icon: "/assets/github.png" },
+  { id: 11, name: "Figma", icon: "/assets/figma.png" },
+  { id: 12, name: "Tailwind CSS", icon: "/assets/tailwind.png" },
 ];
 
 const skillDescriptions: Record<string, string> = {
@@ -30,6 +32,7 @@ const skillDescriptions: Record<string, string> = {
   GitHub: "GitHub: Comfortable with version control, collaboration, branching strategies, and managing repositories for team projects.",
   Figma: "Figma: Adept at designing clean, intuitive interfaces and creating prototypes to visualize UX flows before development.",
   "Tailwind CSS": "Tailwind CSS: Efficient at crafting beautiful, responsive UIs quickly with utility-first classes and consistent design systems.",
+  "Next js": "Next.js: Skilled at building performant, SEO-friendly React apps with SSR, API routes, and optimized routing."
 };
 
 export default function Skills() {
@@ -40,8 +43,14 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="bg-neutral-950 w-full py-28 px-4 md:px-20 lg:px-36 flex flex-col items-center gap-10">
-      <h1 data-aos="fade-up" className="font-bold text-5xl md:text-6xl font-serif text-white mb-10 text-center">
+    <section
+      id="skills"
+      className="bg-neutral-950 w-full py-28 px-4 md:px-20 lg:px-36 flex flex-col items-center gap-10"
+    >
+      <h1
+        data-aos="fade-up"
+        className="font-bold text-5xl md:text-6xl font-serif text-white mb-10 text-center"
+      >
         Skills
       </h1>
 
@@ -54,10 +63,21 @@ export default function Skills() {
             onClick={() => setActiveSkill(skill.name)}
             className="cursor-pointer flex flex-col items-center"
           >
-            <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-              <Image src={skill.icon} alt={skill.name} fill className="object-contain" />
+            <div
+              className={`relative w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition flex items-center justify-center ${
+                skill.bgClass || ""
+              }`}
+            >
+              <Image
+                src={skill.icon}
+                alt={skill.name}
+                fill
+                className="object-contain"
+              />
             </div>
-            <p className="mt-2 text-gray-300 text-sm md:text-base">{skill.name}</p>
+            <p className="mt-2 text-gray-300 text-sm md:text-base">
+              {skill.name}
+            </p>
           </motion.div>
         ))}
       </div>
@@ -71,7 +91,7 @@ export default function Skills() {
           className="mt-10 max-w-2xl text-center px-6"
         >
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent mb-3">
-            {activeSkill} 
+            {activeSkill}
           </h2>
           <p className="text-gray-400 text-sm md:text-base leading-relaxed">
             {skillDescriptions[activeSkill]}
